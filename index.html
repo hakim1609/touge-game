@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Touge</title>
+  <link rel="icon" href="data:," />
+  <style>html,body{background:#0b0f14;height:100%;margin:0;font-family:system-ui,sans-serif;overflow:hidden}canvas{display:block}#hud{pointer-events:none;color:#fff;text-shadow:0 1px 3px #000c;position:fixed;inset:0}#speed{font-size:56px;font-weight:700;line-height:1;position:absolute;bottom:20px;right:24px}#speed small{margin-left:6px;font-size:18px;font-weight:400}#timer{font-variant-numeric:tabular-nums;font-size:28px;position:absolute;top:20px;left:24px}#timer div{opacity:.85;font-size:16px}#dash{text-align:right;font-variant-numeric:tabular-nums;position:absolute;bottom:84px;right:24px}#gear{font-size:40px;font-weight:700;line-height:1}#rpm,#gforce{opacity:.85;font-size:14px}#measure{opacity:.8;font-variant-numeric:tabular-nums;font-size:13px;position:absolute;bottom:44px;left:24px}#perf{opacity:.75;font-variant-numeric:tabular-nums;font-size:13px;position:absolute;top:20px;right:24px}#help{opacity:.7;font-size:13px;line-height:1.5;position:absolute;bottom:20px;left:24px}#msg{opacity:0;font-size:34px;font-weight:700;transition:opacity .3s;position:absolute;top:18%;left:50%;transform:translate(-50%)}#loading{color:#fff;background:#0b0f14;place-items:center;font-size:20px;display:grid;position:fixed;inset:0}</style>
+  <script type="module" crossorigin src="./assets/index-D087b-o8.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three.core-cHjUlQS7.js">
+  <link rel="modulepreload" crossorigin href="./assets/three.module-BqPlYAZQ.js">
+  <link rel="modulepreload" crossorigin href="./assets/cars-CW2n562P.js">
+  <link rel="modulepreload" crossorigin href="./assets/chunks-Dbcody47.js">
+</head>
+<body>
+  <div id="loading">Загрузка…</div>
+  <div id="hud">
+    <div id="timer">00:00.000<div id="best">Лучший круг: —</div><div id="last">Последний: —</div></div>
+    <div id="dash"><div id="gear">1</div><div id="rpm">0 об/мин</div><div id="gforce"></div></div>
+    <div id="speed">0<small>км/ч</small></div>
+    <div id="measure"></div>
+    <div id="msg"></div>
+    <div id="perf"></div>
+    <div id="help">W/S газ и тормоз · A/D руль · Space ручник · E/Q передача (ручная коробка) · R на дорогу · T трасса · L фары · H дальний · Z/X поворотники · V аварийка · M машина · Esc меню · N звук · K помощник руля · B вид камеры · C свободная камера · O онлайн с другом</div>
+  </div>
+</body>
+</html>
