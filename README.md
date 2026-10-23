@@ -17,7 +17,7 @@ PA Дайкоку, Тацуми, Ои, Радужный мост; побереж
 
 ## Скачать
 
-**[Скачать Touge.zip (297 МБ)](https://github.com/hakim1609/touge-game/releases/latest/download/Touge.zip)**
+**[Скачать Touge.zip (269 МБ)](https://github.com/hakim1609/touge-game/releases/latest/download/Touge.zip)**
 
 ## Как запустить
 
