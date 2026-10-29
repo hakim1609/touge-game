@@ -186,7 +186,8 @@ export class SweepPlayer {
       g.age = 0;
       g.on = true;
       // ниже и выше диапазона записи — добираем скоростью чтения (на холостых запись замедлена: низкий ровный гул)
-      g.inc = (this.srcSr / this.sr) * Math.max(0.3, Math.min(1.75, rpm / this.rpmAt(start / this.srcSr)));
+      // предел ускорения — rateMax профиля (V10/V12 на записи шестёрки: иначе выше ~6500 об/мин тон перестаёт расти)
+      g.inc = (this.srcSr / this.sr) * Math.max(0.3, Math.min(this.rateMax || 1.75, rpm / this.rpmAt(start / this.srcSr)));
     }
     this.hop--;
     let y = 0;
@@ -313,6 +314,7 @@ export class EngineDsp {
     else this.sweep.clear();
     if (data && off?.data) this.sweepOff.setData(off.data, off.sr, off.table, srcCyl, cyl);
     else this.sweepOff.clear();
+    this.sweep.rateMax = this.sweepOff.rateMax = this.p?.rateMax || 1.75;
   }
   /** Состояние с физики: обороты, газ 0…1, отсечка, наддув 0…1 и раскрутка турбины 0…1; громкость 0…1. */
   set(rpm, throttle, limiter, boost, spool, gain) {
