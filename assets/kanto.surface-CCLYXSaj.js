@@ -1,0 +1,1 @@
+const s={x0:-92e3,z0:-123e3,step:12.5,nx:14720,nz:22720,chunk:256,codes:["","sand","shingle","rock","marsh","gravel_loose","dirt"],trackBlock:4e3,trackCodes:["track","dirt","gravel","grass","sand","mud","rock"],cells:135};export{s as default};
